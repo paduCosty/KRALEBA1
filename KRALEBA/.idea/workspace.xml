@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9160ecd4-d3a0-4944-ad08-96f6411fe9ba" name="Changes" comment="first commit">
+    <list default="true" id="9160ecd4-d3a0-4944-ad08-96f6411fe9ba" name="Changes" comment="crud commit">
       <change afterPath="$PROJECT_DIR$/app/Http/Controllers/CompanyCRUDController.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Company.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/database/migrations/2022_05_25_191920_create_companies_table.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/companies/create.blade.php" afterDir="false" />
@@ -215,7 +216,7 @@
       <workItem from="1653419340331" duration="893000" />
       <workItem from="1653420250982" duration="1823000" />
       <workItem from="1653424299629" duration="4436000" />
-      <workItem from="1653479884973" duration="14460000" />
+      <workItem from="1653479884973" duration="14869000" />
     </task>
     <task id="LOCAL-00001" summary="tt">
       <created>1653419473311</created>
@@ -301,7 +302,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653429252217</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="crud commit">
+      <created>1653576046230</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1653576046230</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -322,6 +330,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="tt" />
     <MESSAGE value="first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+    <MESSAGE value="crud commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="crud commit" />
   </component>
 </project>
