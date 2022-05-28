@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -33,7 +34,9 @@ class HomeController extends Controller
      */
     public function adminHome()
     {
-        return view('adminHome');
+        $data['companies'] = DB::table('users')->get();
+
+        return view('adminHome', $data);
     }
 
     /**
@@ -45,4 +48,5 @@ class HomeController extends Controller
     {
         return view('managerHome');
     }
+
 }
