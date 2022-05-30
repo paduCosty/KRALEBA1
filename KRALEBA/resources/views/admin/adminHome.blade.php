@@ -12,8 +12,6 @@
                         <head>
                             <meta charset="UTF-8">
                             <title>Users</title>
-{{--                            <link rel="stylesheet"--}}
-{{--                                                                                      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">--}}
                         </head>
                         <div class="container mt-2">
                             <div class="row">
@@ -22,7 +20,9 @@
                                         <h2>Users</h2>
                                     </div>
                                     <div class="pull-right mb-2">
-                                                        <a class="btn btn-success" {{--href="{{ route('companies.create') }}"--}}> Create Company</a>
+                                        <a class="btn btn-success" href="{{ route('view.admin.create_user') }}">
+                                            Create Company
+                                        </a>
                                     </div>
                                 </div>
                             </div>
