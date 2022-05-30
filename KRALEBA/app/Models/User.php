@@ -6,6 +6,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\DB;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 
@@ -17,7 +18,6 @@ class User extends Authenticatable
      * The attributes that are mass assignable.
      *
      * @var array
-
      */
     protected $fillable = [
         'name',
@@ -30,7 +30,6 @@ class User extends Authenticatable
      * The attributes that should be hidden for serialization.
      *
      * @var array
-
      */
     protected $hidden = [
         'password',
@@ -41,7 +40,6 @@ class User extends Authenticatable
      * The attributes that should be cast.
      *
      * @var array
-
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
@@ -50,13 +48,20 @@ class User extends Authenticatable
     /**
      * Interact with the user's first name.
      *
-     * @param  string  $value
+     * @param string $value
      * @return \Illuminate\Database\Eloquent\Casts\Attribute
      */
     protected function type(): Attribute
     {
         return new Attribute(
-            get: fn ($value) =>  ["user", "admin", "manager"][$value],
+            get: fn($value) => ["user", "admin", "manager"][$value],
         );
     }
+
+    public function create_user_with_admin($data)
+    {
+        DB::table('users')->insert($data);
+
+    }
+
 }
